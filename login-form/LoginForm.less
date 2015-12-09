@@ -1,0 +1,73 @@
+@width: 525;
+@height: 680;
+@background: "elements/LoginForm/background.jpg";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.absolute-filled-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box-sizing-border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin: 100px;
+  width: @width * 1px;
+  height: @height * 1px;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: @width - 40px;
+    height: @height - 80px;
+    -webkit-box-shadow: 0 110px 110px #000;
+    -moz-box-shadow: 0 110px 110px #000;
+    box-shadow: 0 110px 110px #000;
+    z-index: -1;
+  }
+}
+.containerContent {
+  &:extend(.absolute-filled-box);
+  background-color: #000;
+  &:before {
+    &:extend(.absolute-filled-box);
+    content: "";
+    opacity: 0.2;
+    background: url(@background) center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  & > div {
+    &:extend(.absolute-filled-box);
+    &:extend(.box-sizing-border-box);
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    padding: 90px 72px 50px 72px;
+    z-index: 1;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+}
+
+.footer {
+  padding-top: 50px;
+  text-align: center;
+  border-top: 1px solid #fff;
+  font-size: 14px;
+  opacity: 0.2;
+}
