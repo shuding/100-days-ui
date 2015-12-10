@@ -1,4 +1,4 @@
-# <100DaysUI />
+# <100-days-ui/>
 
 Turn [@npaulflavius](https://twitter.com/npaulflavius)'s [100 Days UI design](http://www.100daysui.com/) into reusable web components (React)!
 

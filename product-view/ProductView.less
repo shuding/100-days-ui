@@ -1,0 +1,183 @@
+@width: 774;
+@height: 619;
+@background: #FFF;
+@productImage: "elements/ProductView/product.png";
+@colorDarkNavy: #232E3A;
+@colorGrey: #999;
+@colorGold: #bcbd31;
+@colorGoldHover: #E2E42C;
+@fontMontserrat: Montserrat, sans-serif;
+@fontQuestrial: Questrial, sans-serif;
+@fontQuicksand: Quicksand, sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Questrial|Quicksand:700);
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  position: relative;
+  width: @width * 1px;
+  height: @height * 1px;
+  margin: 100px 0;
+  font-family: @fontMontserrat;
+  background-color: @background;
+  -webkit-font-smoothing: antialiased;
+
+  a {
+    text-decoration: none;
+  }
+
+  .back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-top-color: @colorGold;
+    border-left-color: @colorGold;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    cursor: pointer;
+    &:hover {
+      border-top-color: @colorGoldHover;
+      border-left-color: @colorGoldHover;
+    }
+    img {
+      position: absolute;
+      top: -25px;
+      left: -25px;
+    }
+  }
+
+  header {
+    flex: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    align-content: space-around;
+
+    .productPreview {
+      flex: 1;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      margin: 40px 0 0 60px;
+      white-space: nowrap;
+      & > * {
+        margin: 0;
+      }
+      .productName {
+        font-size: 95px;
+        font-weight: 900;
+        line-height: 80px;
+        color: @colorDarkNavy;
+      }
+      .productSubtitle {
+        margin: 10px 0;
+        font-family: @fontQuestrial;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: @colorGrey;
+      }
+      .productPrice {
+        font-family: @fontQuestrial;
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: @colorDarkNavy;
+      }
+      .productImage {
+        flex: 1;
+        background-image: url(@productImage);
+        background-position: center;
+      }
+    }
+
+    .productDetails {
+      font-family: @fontQuestrial;
+      flex: 1;
+      margin: 30px 60px;
+      font-size: 16px;
+      line-height: 1.4em;
+      color: @colorGrey;
+      strong {
+        font-weight: inherit;
+        color: #666;
+      }
+      a {
+        color: #39F;
+      }
+      .productReview {
+        margin-top: 40px;
+        img {
+          margin-right: 2px;
+          vertical-align: text-bottom;
+        }
+      }
+      .productQuantity {
+        margin-top: 80px;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        text-transform: uppercase;
+        color: #333;
+        & > span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .productQuantityIncrementer {
+          flex: 1;
+          margin-left: 40px;
+          color: @colorGrey;
+          button {
+            font-family: @fontQuicksand;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    flex: 0;
+    margin-top: 10px;
+    margin-left: 60px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+    border-top: 1px solid rgb(216, 216, 216);
+
+    & > div {
+      font-family: @fontQuestrial;
+      padding: 15px 0;
+      margin: auto 60px auto 0;
+      small {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: @colorDarkNavy;
+      }
+      p {
+        margin: 0;
+        font-size: 30px;
+        color: @colorGold;
+      }
+      a {
+        font-size: 30px;
+        color: @colorGold;
+        &:hover {
+          color: @colorGoldHover;
+        }
+      }
+    }
+  }
+}
