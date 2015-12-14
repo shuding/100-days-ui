@@ -19,7 +19,7 @@ export default class LoginForm extends React.Component {
         return <div className={styles.container}>
             <div className={styles.containerContent}>
                 <div>
-                    <LoginFormTab items={[{text:'Sign In', href:'#', active: true}, {text:'Sign Up', href:'#'}]}/>
+                    <LoginFormTab items={[{text:'Sign In', href:'javascript:;', active: true}, {text:'Sign Up', href:'javascript:;'}]}/>
                     <div>
                         <LoginFormInput label='username' type='username' value='Paul Flavius' />
                         <LoginFormInput label='password' type='password' value='Paul Flavius' />
@@ -27,7 +27,7 @@ export default class LoginForm extends React.Component {
                         <LoginFormSubmit label='Sign In' />
                     </div>
                     <div className={styles.footer}>
-                        <a>Forgot Password?</a>
+                        <a href="javascript:;">Forgot Password?</a>
                     </div>
                 </div>
             </div>

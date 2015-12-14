@@ -1,3 +1,7 @@
+@colorGrey: #999;
+@fontQuestrial: Questrial, sans-serif;
+@fontQuicksand: Quicksand, sans-serif;
+
 .numberIncrementer {
   width: 100%;
   display: flex;
@@ -5,6 +9,7 @@
   flex-direction: row;
   -webkit-flex-direction: row;
   font-size: 40px;
+  color: @colorGrey;
 
   button {
     display: inline-block;
@@ -14,6 +19,7 @@
     font-size: 30px;
     color: #d9d9d9;
     border: none;
+    font-family: @fontQuicksand;
     background-color: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -28,5 +34,6 @@
   span {
     flex: 1;
     text-align: center;
+    font-family: @fontQuestrial;
   }
 }

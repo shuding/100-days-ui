@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.dialPadContainer {
+  width: 420px;
+  height: 700px;
+  font-family: Helvetica, sans-serif;
+  background-color: #FFF;
+  -webkit-font-smoothing: antialiased;
+  .dialPadNumbers {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-content: space-between;
+    -webkit-align-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+
+    > div {
+      flex: 0 0 33%;
+    }
+  }
+  .dialPadIndicator {
+    display: flex;
+    display: -webkit-flex;
+    padding: 20px 40px 35px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span {
+      padding: 10px;
+    }
+    .dialPadNumberControl {
+      font-size: 20px;
+      color: #B2B2B2;
+      cursor: pointer;
+    }
+    .dialPadNumberDisplay {
+      line-height: 48px;
+      color: #63D91C;
+      &:empty:before {
+        content: "\00a0";
+      }
+    }
+  }
+}
+
+.contactsContainer {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 680px;
+  overflow: scroll;
+  & > div {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 100px;
+      width: 0;
+      height: ~"calc(100% - 300px)";
+      margin: auto;
+      box-shadow: 0 0 90px 130px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

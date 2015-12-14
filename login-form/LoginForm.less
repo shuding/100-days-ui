@@ -1,6 +1,7 @@
 @width: 525;
 @height: 680;
-@background: "elements/LoginForm/background.jpg";
+@background: "./background.jpg";
+@overlay: "./overlay.png";
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -18,7 +19,7 @@
 }
 .container {
   position: relative;
-  margin: 100px;
+  margin: 0 100px 100px 100px;
   width: @width * 1px;
   height: @height * 1px;
   font-family: Montserrat, sans-serif;
@@ -38,17 +39,28 @@
     box-shadow: 0 110px 110px #000;
     z-index: -1;
   }
+  &:after {
+    &:extend(.absolute-filled-box);
+    content: "";
+    background: url(@overlay) center;
+    background-size: cover;
+  }
 }
 .containerContent {
   &:extend(.absolute-filled-box);
-  background-color: #000;
   &:before {
+    &:extend(.absolute-filled-box);
+    content: "";
+    background: #000;
+  }
+  &:after {
     &:extend(.absolute-filled-box);
     content: "";
     opacity: 0.2;
     background: url(@background) center;
     -webkit-background-size: cover;
     background-size: cover;
+    mix-blend-mode: lighten;
   }
   & > div {
     &:extend(.absolute-filled-box);
@@ -70,4 +82,8 @@
   border-top: 1px solid #fff;
   font-size: 14px;
   opacity: 0.2;
+  & > a {
+    color: #fff;
+    text-decoration: none;
+  }
 }

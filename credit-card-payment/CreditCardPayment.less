@@ -1,0 +1,59 @@
+@width: 850px;
+@height: 530px;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Roboto);
+
+.container {
+  width: @width;
+  height: @height;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #FFF;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  box-shadow: 8px 14px 81px rgba(0, 0, 0, 0.2);
+
+  & > .header {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+
+    padding: 50px;
+    height: 170px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-size: 30px;
+    font-weight: 600; // webkit font smoothing
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: #018FFD;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  & > .content {
+    padding: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    & > .row {
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      align-items: center;
+      -webkit-align-items: center;
+      margin: 0 -15px 25px -15px; // offset for the left and right of the responsive grid
+    }
+  }
+}

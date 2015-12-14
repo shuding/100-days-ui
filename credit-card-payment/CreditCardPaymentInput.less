@@ -1,0 +1,44 @@
+@downIcon: "./down.png";
+
+.label {
+  flex: 1;
+  -webkit-flex: 1;
+  display: block;
+  margin: 0 15px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  color: #999;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+
+  & > input, select {
+    display: block;
+    width: 100%;
+    height: 64px;
+    margin: 15px 0; // grid
+    padding: 18px;
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+    color: rgb(52, 50, 50);
+    font-weight: bold;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #81C8FF;
+    }
+  }
+
+  & > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(@downIcon) no-repeat calc(100% - 10px);
+  }
+}

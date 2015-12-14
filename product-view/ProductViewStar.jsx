@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-import StarOn from 'elements/ProductView/star-on.png';
-import StarOff from 'elements/ProductView/star-off.png';
+import StarOn from './star-on.png';
+import StarOff from './star-off.png';
 
 export default class ProductViewStar extends React.Component {
     constructor(props) {

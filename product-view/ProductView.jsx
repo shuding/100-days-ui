@@ -9,7 +9,7 @@ import styles from "./ProductView.less";
 import ProductViewStar from "./ProductViewStar";
 import ProductViewNumberIncrementer from "./ProductViewNumberIncrementer";
 
-import arrow from "elements/ProductView/arrow.png";
+import arrow from "./arrow.png";
 
 export default class ProductView extends React.Component {
     constructor(props) {

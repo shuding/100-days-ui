@@ -1,0 +1,68 @@
+.digitButton {
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  -webkit-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  -ms-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: rgb(237, 237, 237);
+    -webkit-transition: background-color .05s ease;
+    -moz-transition: background-color .05s ease;
+    -ms-transition: background-color .05s ease;
+    -o-transition: background-color .05s ease;
+    transition: background-color .05s ease;
+  }
+  &:active {
+    background-color: #ddd;
+  }
+
+  // use to make vertical align
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    & > span {
+      display: block;
+      margin: -10px 0 0;
+      font-size: 46px;
+      font-weight: 100;
+      color: #666;
+    }
+    & > small {
+      display: block;
+      font-size: 16px;
+      font-family: Arvo, sans-serif;
+      color: #B2B2B2;
+      white-space: pre-wrap;
+    }
+  }
+
+  &.callButton {
+    &:hover {
+      background-color: rgb(216, 246, 183);
+    }
+    &:active {
+      background-color: rgb(207, 237, 175);
+    }
+  }
+}

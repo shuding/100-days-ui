@@ -25,14 +25,14 @@ export default class ProductViewNumberIncrementer extends React.Component {
 
     handleDec() {
         if (this.state.value > this.state.min) {
-            this.state.onChange(this.state.value - 1);
+            this.state.onChange && this.state.onChange(this.state.value - 1);
             this.setState({value: this.state.value - 1});
         }
     }
 
     handleInc() {
         if (this.state.value < this.state.max) {
-            this.state.onChange(this.state.value + 1);
+            this.state.onChange && this.state.onChange(this.state.value + 1);
             this.setState({value: this.state.value + 1});
         }
     }
