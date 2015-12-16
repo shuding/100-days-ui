@@ -7,7 +7,7 @@ import React from 'react';
 
 import styles from "./LoginFormInput.less";
 
-class LoginFormInput extends React.Component {
+export class LoginFormInput extends React.Component {
     render() {
         var { label, type, value } = this.props;
         return <div className={styles.inputLabelContainer}>
@@ -19,7 +19,7 @@ class LoginFormInput extends React.Component {
     }
 }
 
-class LoginFormCheckbox extends React.Component {
+export class LoginFormCheckbox extends React.Component {
     render() {
         var { label } = this.props;
         return <div className={styles.checkboxLabelContainer}>
@@ -31,7 +31,7 @@ class LoginFormCheckbox extends React.Component {
     }
 }
 
-class LoginFormSubmit extends React.Component {
+export class LoginFormSubmit extends React.Component {
     render() {
         var { label } = this.props;
         return <div className={styles.inputLabelContainer}>
@@ -41,5 +41,3 @@ class LoginFormSubmit extends React.Component {
         </div>;
     }
 }
-
-export { LoginFormInput, LoginFormCheckbox, LoginFormSubmit };

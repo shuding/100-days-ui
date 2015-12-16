@@ -20,4 +20,4 @@ export default class LoginFormTab extends React.Component {
             }
         </div>;
     }
-};
+}

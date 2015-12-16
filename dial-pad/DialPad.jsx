@@ -82,10 +82,10 @@ export default class DialPad extends React.Component {
                     <span className={styles.dialPadNumberControl}>+</span>
                 <span className={styles.dialPadNumberDisplay}
                       style={{fontSize: this.state.numberSize}}>{this.state.number}</span>
-                    <span className={styles.dialPadNumberControl} onClick={()=>{this.handleClear()}}>×</span>
+                    <span className={styles.dialPadNumberControl} onClick={()=>{this.handleClear();}}>×</span>
                 </div>
                 <div className={styles.dialPadNumbers}>{
-                    this.state.digits.map(digit => <DialPadButton onClick={(x)=>{this.handleInput(x)}} digit={digit[0]}
+                    this.state.digits.map(digit => <DialPadButton onClick={(x)=>{this.handleInput(x);}} digit={digit[0]}
                                                                   letters={digit[1]}/>)
                 }
                 </div>
@@ -93,4 +93,4 @@ export default class DialPad extends React.Component {
             </div>
         </div>;
     }
-};
+}

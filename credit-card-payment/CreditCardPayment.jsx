@@ -30,4 +30,4 @@ export default class CreditCardPayment extends React.Component {
             </div>
         </div>;
     }
-};
+}

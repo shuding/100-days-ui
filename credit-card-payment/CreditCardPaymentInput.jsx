@@ -28,4 +28,4 @@ export default class CreditCardPaymentInput extends React.Component {
             }
         </label>;
     }
-};
+}

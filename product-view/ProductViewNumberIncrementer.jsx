@@ -25,23 +25,23 @@ export default class ProductViewNumberIncrementer extends React.Component {
 
     handleDec() {
         if (this.state.value > this.state.min) {
-            this.state.onChange && this.state.onChange(this.state.value - 1);
+            if (this.state.onChange) this.state.onChange(this.state.value - 1);
             this.setState({value: this.state.value - 1});
         }
     }
 
     handleInc() {
         if (this.state.value < this.state.max) {
-            this.state.onChange && this.state.onChange(this.state.value + 1);
+            if (this.state.onChange) this.state.onChange(this.state.value + 1);
             this.setState({value: this.state.value + 1});
         }
     }
 
     render() {
         return <span className={styles.numberIncrementer}>
-            <button onClick={() => {this.handleDec()}}>&lt;</button><span>{
+            <button onClick={() => {this.handleDec();}}>&lt;</button><span>{
             this.state.value < 10 ? '0' + this.state.value : this.state.value
-        }</span><button onClick={() => {this.handleInc()}}>&gt;</button>
+        }</span><button onClick={() => {this.handleInc();}}>&gt;</button>
         </span>;
     }
-};
+}

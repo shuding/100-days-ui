@@ -9,22 +9,20 @@ import styles from './DialPadButton.less';
 
 import phone from './phone.png';
 
-class DialPadButton extends React.Component {
+export class DialPadButton extends React.Component {
     render() {
         return <div>
-            <div className={styles.digitButton} onClick={()=>{this.props.onClick&&this.props.onClick(this.props.digit)}}>
+            <div className={styles.digitButton} onClick={()=>{if(this.props.onClick)this.props.onClick(this.props.digit);}}>
                 <span><span>{this.props.digit}</span><small>{this.props.letters || ' '}</small></span>
             </div>
         </div>;
     }
 }
 
-class DialPadCallButton extends React.Component {
+export class DialPadCallButton extends React.Component {
     render() {
         return <div className={styles.digitButton + ' ' + styles.callButton}>
             <img src={phone} />
-        </div>
+        </div>;
     }
 }
-
-export { DialPadButton, DialPadCallButton };

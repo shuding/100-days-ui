@@ -1,0 +1,27 @@
+{
+  "name": "100-days-ui",
+  "version": "0.4.0",
+  "description": "Turn [@npaulflavius](https://twitter.com/npaulflavius)'s [100 Days UI design](http://www.100daysui.com/) into reusable web components (React)!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jsxhint --es6module ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quietshu/100-days-ui"
+  },
+  "keywords": [
+    "ui",
+    "react",
+    "react",
+    "component",
+    "web",
+    "component"
+  ],
+  "author": "Shu Ding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quietshu/100-days-ui/issues"
+  },
+  "homepage": "https://github.com/quietshu/100-days-ui"
+}

@@ -1,0 +1,57 @@
+.time {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+
+  & > span:first-of-type {
+    color: #FFF;
+  }
+  & > span:last-of-type {
+    float: right;
+    color: rgba(255, 255, 255, 0.1);
+  }
+  &:after {
+    content: "";
+    clear: both;
+  }
+}
+.barContainer {
+  margin: 10px 0 27px 0;
+  height: 5px;
+  cursor: pointer;
+  &:hover {
+    & > .bar {
+      height: 3px;
+      & > div {
+        height: 3px;
+      }
+    }
+  }
+}
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  box-sizing: content-box;
+  &:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  & > div {
+    background-color: rgb(255, 78, 117);
+    height: 1px;
+    &:hover {
+      box-shadow: 0 0 10px rgb(255, 78, 117);
+    }
+  }
+}
+.bar, .bar > div {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}

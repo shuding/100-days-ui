@@ -24,11 +24,11 @@ export default class ProductViewStar extends React.Component {
             [0,0,0,0,0].map((c, index) => {
                 let bindClick = ((star) => {
                     return () => {
-                        this.handleClick(star)
+                        this.handleClick(star);
                     };
                 })(index + 1);
                 return index < this.state.star ? <img src={StarOn} onClick={bindClick}/> : <img src={StarOff} onClick={bindClick}/>;
             })
         } </span>;
     }
-};
+}

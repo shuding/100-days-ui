@@ -75,4 +75,4 @@ export default class ProductView extends React.Component {
             </footer>
         </div>;
     }
-};
+}

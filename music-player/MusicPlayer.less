@@ -1,0 +1,66 @@
+@width: 450px;
+@height: 630px;
+@cover: './cover.jpg';
+@coverOverlay: './cover_overlay.jpg';
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.container {
+  position: relative;
+  width: @width;
+  height: @height;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 14px 14px 40px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  & > .cover {
+    position: absolute;
+    width: @width;
+    height: @width;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: url(@cover) no-repeat;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: @width;
+      height: @width;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      mix-blend-mode: darken;
+      background: url(@coverOverlay) no-repeat;
+    }
+  }
+
+  & > .content {
+    display: block;
+    position: absolute;
+    padding: 30px 40px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .controlContainer {
+      margin-top: 50px;
+    }
+
+    .contentHeader, .controlBtns {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      align-items: flex-end;
+      -webkit-align-items: flex-end;
+    }
+  }
+}
