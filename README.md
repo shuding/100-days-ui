@@ -4,7 +4,7 @@ Turn [@npaulflavius](https://twitter.com/npaulflavius)'s [100 Days UI design](ht
 
 Developed by [@quietshu](https://github.com/quietshu) with React and Less, open sourced with the MIT license.
 
-Preview: [quietshu.github.io/ui](http://quietshu.github.io/ui/)
+Preview: [quietshu.github.io/100-days-ui](http://quietshu.github.io/100-days-ui/) or [git.io/100daysui](http://git.io/100daysui)
 
 ## Why?
 
