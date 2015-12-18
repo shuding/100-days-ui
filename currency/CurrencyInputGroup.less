@@ -1,0 +1,47 @@
+@icon-more: './icon-more.png';
+
+.container {
+  display: inline-block;
+  width: 180px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  white-space: nowrap;
+
+  & > input {
+    margin: 0;
+    height: 1.5em;
+    width: 95px;
+    text-align: center;
+    border: none;
+    border-right: 1px solid rgba(162, 162, 162, 0.2);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    vertical-align: middle;
+  }
+
+  & > select {
+    height: 50px;
+    width: 85px;
+    text-indent: 1.2em;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+    background: url(@icon-more) no-repeat calc(100% - 20px) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    vertical-align: middle;
+  }
+}

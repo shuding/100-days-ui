@@ -1,0 +1,62 @@
+@icons: './icons.png';
+@icons-active: './icons-active.png';
+
+.container {
+  padding: 20px 20px 0;
+
+  & > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    background: url(@icons) no-repeat left center;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    & > li {
+      display: inline-block;
+      text-align: center;
+      height: 100%;
+      width: 100px;
+      background: url(@icons-active) no-repeat left center;
+      cursor: pointer;
+      opacity: 0;
+      -webkit-transition: opacity .2s ease;
+      -moz-transition: opacity .2s ease;
+      -ms-transition: opacity .2s ease;
+      -o-transition: opacity .2s ease;
+      transition: opacity .2s ease;
+      &:hover {
+        opacity: 0.5;
+      }
+      &.active {
+        opacity: 1;
+      }
+      &.inactive {}
+      &.BTC {
+        background-position-x: 0;
+      }
+      &.USD {
+        background-position-x: -100px;
+      }
+      &.EUR {
+        background-position-x: -200px;
+      }
+      &.GBP {
+        background-position-x: -300px;
+      }
+    }
+  }
+  & > span {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #969696;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+}

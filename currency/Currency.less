@@ -1,0 +1,22 @@
+@width: 820px;
+@height: 600px;
+@background: './overlay.jpg';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Montserrat);
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  width: @width;
+  height: @height;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  background-image: url(@background);
+  box-shadow: 11px 20px 60px rgba(0, 0, 0, 0.5);
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
