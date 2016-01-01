@@ -8,7 +8,7 @@ Developed by [@quietshu](https://github.com/quietshu) with React and Less, open 
 
 Preview: [quietshu.github.io/100-days-ui](http://quietshu.github.io/100-days-ui/).
 
-## Tech details
+### Tech details
 
 Those components are all writen for React, with ES6 and Less. So I strongly recommend to use [webpack](https://github.com/webpack/webpack) to bundle your project. 
 
@@ -18,13 +18,17 @@ In the meantime, I will write about all I have learned from thinking about and d
 
 BTW, the gh-pages branch (preview page) is built with [react-router](https://github.com/rackt/react-router). 
 
-## Why?
+### Why 100-days-ui? What problem do you solve? How can you push it further?
 
 > Improving any skill simply takes time and practice, and you can lengthen the former by increasing the latter. 
 >
 > —Jake Rocheleau
 
-I think this <100-days-ui/> project will be kind of experimental practice. I'd like to try (discover) some layout/animation design concepts in this project (especially the [react-motion](https://github.com/chenglou/react-motion), I love it!). 
+I think this <100-days-ui/> project will be kind of experimental practice. I'd like to try (discover) some layout/animation design concepts within this project (especially the [react-motion](https://github.com/chenglou/react-motion), I love it!). 
+
+I've been thinking about dynamic layouts for some time. But neither _layout system_ nor _layout transition_ is well defined, we have grids, flexboxes and components, some are blocked and some are inlined. We have fullpage background images and float figures. Sometimes we need to make all those stuff responsive, and sometimes parallax scrolling. 
+
+It's not about the CSS specs. It's about how to make things together. Practice is very necessary, it's not only about personal growth. 
 
 ## About
 
