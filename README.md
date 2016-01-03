@@ -12,9 +12,9 @@ Preview: [quietshu.github.io/100-days-ui](http://quietshu.github.io/100-days-ui/
 
 Those components are all writen for React, with ES6 and Less. So I strongly recommend to use [webpack](https://github.com/webpack/webpack) to bundle your project. 
 
-And the demo (including webpack config, babel config, package.json and jshint config) will be on the [build-sap](https://github.com/quietshu/100-days-ui/tree/build-sap) branch (:construction:). 
+And the demo (including webpack config, babel config, package.json and jshint config) will be updated on the [build-sap](https://github.com/quietshu/100-days-ui/tree/build-sap) branch (:construction:). 
 
-In the meantime, I will write about all I have learned from thinking about and deconstructing those UI designs, developing these code, any kinds of insights. Please feel free to contact me or open an issues. 
+In the meantime, I will write about all I have learned from thinking about and deconstructing those UI designs, developing these code, any kinds of insights. Please feel free to contact me or disscuss on the issue page.
 
 BTW, the gh-pages branch (preview page) is built with [react-router](https://github.com/rackt/react-router). 
 
