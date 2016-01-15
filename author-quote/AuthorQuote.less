@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900|Quicksand);
+
+@height: 490px;
+@sidebar-width: 170px;
+@content-width: 530px;
+
+.container {
+  display: flex;
+  width: @sidebar-width + @content-width;
+  height: @height;
+  background-color: white;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+  -webkit-font-smoothing: antialiased;
+}
+
+.sidebar {
+  display: flex;
+  width: @sidebar-width;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: flex;
+  overflow: hidden;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
