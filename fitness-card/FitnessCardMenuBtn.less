@@ -1,0 +1,68 @@
+@check: './check.png';
+
+.button {
+  position: relative;
+  width: 350px;
+  height: 90px;
+  background-color: rgb(215, 215, 215);
+
+  font-size: 30px;
+  line-height: 90px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+
+  //overflow: hidden;
+
+  &>div {
+    // this is background element
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    background-size: auto;
+
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+
+  &>span {
+    position: relative;
+  }
+
+  &:hover, &.selected {
+    background-color: rgb(191, 243, 114);
+    color: black;
+
+    &>div {
+      background-position: -30px -10px;
+      background-size: 160%;
+      opacity: 0.2;
+    }
+  }
+
+  &.selected:after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 25px;
+    background: #FFF url(@check);
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.05);
+    width: 40px;
+    height: 40px;
+  }
+}
