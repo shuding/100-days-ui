@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jsxhint --es6module src",
-    "build": "webpack --progress --profile --colors"
+    "build": "webpack --progress --profile -c --output-file=bundle.js --output-path=./dist"
   },
   "repository": {
     "type": "git",
@@ -32,12 +32,14 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.3.13",
-    "css-loader": "^0.23.0",
+    "css-loader": "^0.23.1",
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
-    "html-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^2.7.2",
     "less": "^2.5.3",
     "react": "^0.14.3",
-    "style-loader": "^0.13.0"
+    "react-dom": "^0.14.7",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7"
   }
 }

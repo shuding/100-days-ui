@@ -1,20 +1,24 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var app = process.env.app;
+
 module.exports = {
 	plugins: [
-    	new HtmlWebpackPlugin()
+    	new HtmlWebpackPlugin("index.html")
 	],
-	output: {
-		libraryTarget: "var",
-        library: "Foo"
-	},
+	entry: './src/' + app + '/index.js',
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     module: {
         loaders: [
             { test: /\.jsx$/, loader: "babel" },
-            { test: /\.less$/, loader: "style!css!less" },
-            { test: /\.(jpe?g|png|gif|svg)$/i, loader: "file?hash=sha512&digest=hex&name=[hash].[ext]" },
-            { test: require.resolve('react'), loader: "expose?React" },
-            { test: require.resolve('react/lib/ReactDOM'), loader: "expose?ReactDOM" }
+            { extensions: [ 'png', 'jpg', 'jpeg', 'gif', 'svg' ],
+    		  test: /\.(png|jpg|jpeg|gif|svg)(\?.*)?$/,
+    		  loader: 'url-loader?limit=10000' },
+  			{ extensions: [ 'less' ],
+    		  test: /\.(less)(\?.*)?$/,
+    		  loaders: ['style', 'css?module', require.resolve('./fix-loader') ,'less?minimize'] }
         ]
     }
 };
