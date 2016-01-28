@@ -1,0 +1,90 @@
+@height: 660;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Vidaloka|PT+Serif);
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+
+  width: 910px;
+  height: @height * 1px;
+  background-color: #FFF;
+  box-shadow: 6px 10px 57px 16px rgba(0, 0, 0, 0.8);
+
+  -webkit-font-smoothing: antialiased;
+}
+.mainImg {
+  position: relative;
+
+  & > h2 {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+.recipe {
+  flex: 1;
+
+  & > .header {
+    padding: 45px;
+    height: 340px;
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+    background-color: #7D13D8;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    & > h1 {
+      margin: 0;
+      color: #FFF;
+      line-height: 1;
+      text-align: left;
+      font-size: 60px;
+      font-weight: 100;
+      font-family: "Vidaloka", sans-serif;
+      text-transform: uppercase;
+    }
+
+    & > p {
+      margin: 0;
+      color: #FFF008;
+      text-align: justify;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+    }
+
+    & > .row {
+      display: flex;
+      display: -webkit-flex;
+
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+    }
+  }
+
+  & > .content {
+    height: @height - 340px;
+    padding: 45px;
+    overflow-y: scroll;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

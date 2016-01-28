@@ -8,8 +8,8 @@ import AuthorQuoteSidebar from './AuthorQuoteSidebar';
 import AuthorQuoteContent from './AuthorQuoteContent';
 
 import styles from './AuthorQuote.less';
-import bg1 from 'elements/AuthorQuote/pic-1.jpg';
-import bg2 from 'elements/AuthorQuote/pic-2.jpg';
+import bg1 from './pic-1.jpg';
+import bg2 from './pic-2.jpg';
 
 export default class AuthorQuote extends React.Component {
     constructor() {

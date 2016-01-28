@@ -1,0 +1,39 @@
+.container {
+  font-family: "PT Serif", serif;
+  color: #40474D;
+
+  & > .tab {
+    height: 60px;
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    a {
+      display: inline-block;
+      margin-right: 25px;
+      text-decoration: none;
+    }
+
+    & > .select {
+      margin-top: 5px;
+      background-color: #FF4E00;
+      position: absolute;
+      width: 100px;
+      height: 2px;
+
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+  }
+
+  & > .content {
+    font-size: 14px;
+
+    p {
+      margin: 0 0 0.714em;
+    }
+  }
+}
